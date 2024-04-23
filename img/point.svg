@@ -1,0 +1,8 @@
+<!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="120px" height="120px" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
+<circle cx="60" cy="60.834" r="54.167"/>
+</svg> -->
+
+ <svg width="4" height="4" viewbox="0 0 4 4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <circle r="2" cx="2" cy="2" fill="#000000" />
+  </svg>
