@@ -1,0 +1,107 @@
+.tabs {
+  @include tabs;
+
+  &__panel {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: var(--grid-gap);
+
+      @include small-tablet {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      @include mobile {
+        gap: 16px;
+      }
+
+      &-1 {
+        & li:nth-last-child(-n+3) {
+          @include small-tablet {
+            display: none;
+          }
+        }
+      }
+
+      &-2 {
+        & li:nth-child(-n+3) {
+          display: none;
+
+          @include small-tablet {
+            display: block;
+          }
+        }
+
+        & li:nth-last-child(-n+6) {
+          @include small-tablet {
+            display: none;
+          }
+        }
+      }
+
+      &-3 {
+        display: none;
+
+        @include small-tablet {
+          display: grid;
+        }
+      }
+    }
+
+    &-item {
+      grid-column: 3 span;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    bottom: -63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__nav {
+    &-item {
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+
+    &-item {
+      &--3 {
+        display: none;
+
+        @include small-tablet {
+          display: block;
+        }
+      }
+    }
+
+    &-btn {
+      width: 32px;
+      height: 32px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      color: var(--color-primary);
+      background-color: transparent;
+      border: 2px solid var(--color-primary);
+      border-radius: 10px;
+      transition: color .1s ease-in-out, border-color .1s ease-in-out, background-color .1s ease-in-out;
+
+      &--active {
+        color: var(--color-white);
+        background-color: var(--color-primary-shade);
+        border-color: var(--color-primary-shade);
+      }
+
+      &:focus {
+        color: var(--color-white);
+        background-color: var(--color-primary-shade);
+        border-color: var(--color-primary-shade);
+      }
+    }
+  }
+}
+

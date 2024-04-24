@@ -1,0 +1,27 @@
+.slider {
+  &-btns {
+    position: absolute;
+    top: 70px;
+    right: 36px;
+    display: flex;
+
+    @include tablet {
+      top: 66px;
+    }
+
+    @include small-tablet {
+      right: 72px;
+    }
+
+    @include mobile {
+      top: auto;
+      bottom: 0;
+      right: calc(50% - 75px / 2);
+    }
+  }
+
+  &-prev {
+    margin-right: 13px;
+    transform: rotate(180deg);
+  }
+}

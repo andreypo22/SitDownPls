@@ -1,0 +1,700 @@
+<section class="catalog">
+  <div class="container catalog__container">
+    <div class="catalog__filter">
+      <h3 class="catalog__filter-title">Фильтровать по:</h3>
+      <div class="catalog__checkbox">
+        <h4 class="catalog__checkbox-title">Категория</h4>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden" checked>
+          <span class="catalog__checkbox-check"></span>
+          Диваны
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Кресла
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Пуфы
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Кровати
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Тумбы
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Комоды
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Стулья
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Столы
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Аксессуары
+        </label>
+      </div>
+      <div class="catalog__checkbox">
+        <h4 class="catalog__checkbox-title catalog__checkbox-title--price">Цена</h4>
+        @include('price-range.html')
+      </div>
+      <div class="catalog__checkbox">
+        <h4 class="catalog__checkbox-title">Скидка</h4>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Более 5 000
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Менее 5 000
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden" checked>
+          <span class="catalog__checkbox-check"></span>
+          Не важно
+        </label>
+      </div>
+      <div class="catalog__checkbox">
+        <h4 class="catalog__checkbox-title">Цвет</h4>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Коричневый
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Черный
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Бежевый
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Серый
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Белый
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Синий
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden" checked>
+          <span class="catalog__checkbox-check"></span>
+          Оранжевый
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Желтый
+        </label>
+        <label class="catalog__checkbox-item">
+          <input type="checkbox" name="check" class="catalog__checkbox-input visually-hidden">
+          <span class="catalog__checkbox-check"></span>
+          Зеленый
+        </label>
+      </div>
+    </div>
+    <div class="catalog__content">
+      <h3 class="section-title catalog__content-title">Каталог</h3>
+      <div class="catalog__select">
+        <h4 class="catalog__select-title">Фильтры:</h4>
+        <select class="catalog__select-category" name="select" type="select-one" aria-label="Выбор категории">
+          <option placeholder value="Категория">Категория</option>
+          <option value="Диваны"></option>
+          <option value="Кресла"></option>
+          <option value="Пуфы"></option>
+          <option value="Кровати"></option>
+          <option value="Тумбы"></option>
+          <option value="Комоды"></option>
+          <option value="Стулья"></option>
+          <option value="Столы"></option>
+          <option value="Аксессуары"></option>
+        </select>
+        <select class="catalog__select-price" name="select" type="select-one" aria-label="Выбор цены">
+          <option placeholder value="Цена">Цена</option>
+          <option value="От 0 до 25000"></option>
+          <option value="От 25000 до 50000"></option>
+          <option value="От 50000 до 75000"></option>
+          <option value="От 75000 до 100000"></option>
+          <option value="От 100000 до 125000"></option>
+          <option value="От 125000 до 150000"></option>
+          <option value="От 150000 до 175000"></option>
+          <option value="От 175000 до 200000"></option>
+        </select>
+        <select class="catalog__select-sale" name="select" type="select-one" aria-label="Выбор скидки">
+          <option placeholder value="Скидка">Скидка</option>
+          <option value="Более 5000"></option>
+          <option value="Менее 5000"></option>
+          <option value="Не важно"></option>
+        </select>
+        <select class="catalog__select-color" name="select" type="select-one" aria-label="Выбор цвета">
+          <option placeholder value="Цвет">Цвет</option>
+          <option value="Коричневый"></option>
+          <option value="Черный"></option>
+          <option value="Бежевый"></option>
+          <option value="Серый"></option>
+          <option value="Белый"></option>
+          <option value="Синий"></option>
+          <option value="Оранжевый"></option>
+          <option value="Желтый"></option>
+          <option value="Зеленый"></option>
+        </select>
+      </div>
+      <div class="tabs" data-tabs="tabs">
+        <div class="tabs__content">
+          <div class="tabs__panel">
+            <ul class="tabs__panel-list tabs__panel-list-1 list-reset">
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">5,0</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-1.png" alt="Диван кожаный R-94" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван кожаный</span>
+                      <span>&lsquo;&lsquo;R-94&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">94 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,9</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-2.png" alt="Диван апартековый T-75" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван апартековый</span>
+                      <span>&lsquo;&lsquo;T-75&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">69 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,8</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-3.png" alt="Диван тканевый D-31" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван тканевый</span>
+                      <span>&lsquo;&lsquo;D-31&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">28 490 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+               <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,8</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-7.png" alt="Диван велюровый Y-68" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван велюровый</span>
+                      <span>&lsquo;&lsquo;Y-68&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">22 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,8</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-8.png" alt="Диван из шинила W-95" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван из шинила</span>
+                      <span>&lsquo;&lsquo;W-95&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">22 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,8</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-9.png" alt="Диван флоковый G-41" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван флоковый</span>
+                      <span>&lsquo;&lsquo;G-41&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">17 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,8</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-13.png" alt="Диван шиниловый V-43" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван шиниловый</span>
+                      <span>&lsquo;&lsquo;V-43&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">19 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,7</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-14.png" alt="Диван велюровый S-99" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван велюровый</span>
+                      <span>&lsquo;&lsquo;S-99&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">19 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,7</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-15.png" alt="Диван из кожзама F-85" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван из кожзама</span>
+                      <span>&lsquo;&lsquo;F-85&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">26 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs__panel">
+            <ul class="tabs__panel-list tabs__panel-list-2 list-reset">
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,8</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-13.png" alt="Диван шиниловый V-43" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван шиниловый</span>
+                      <span>&lsquo;&lsquo;V-43&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">19 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,7</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-14.png" alt="Диван велюровый S-99" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван велюровый</span>
+                      <span>&lsquo;&lsquo;S-99&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">19 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,7</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-15.png" alt="Диван из кожзама F-85" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван из кожзама</span>
+                      <span>&lsquo;&lsquo;F-85&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">26 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,6</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-4.png" alt="Диван флоковый H-64" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван флоковый</span>
+                      <span>&lsquo;&lsquo;H-64&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">25 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,6</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-11.png" alt="Диван флоковый H-58" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван флоковый</span>
+                      <span>&lsquo;&lsquo;H-58&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">23 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,6</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-6.png" alt="Диван из кожзама R-43" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван из кожзама</span>
+                      <span>&lsquo;&lsquo;R-43&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">33 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,6</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-10.png" alt="Диван из шинила C-42" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван из шинила</span>
+                      <span>&lsquo;&lsquo;C-42&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">18 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,6</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-11.png" alt="Диван велюровый U-58" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван велюровый</span>
+                      <span>&lsquo;&lsquo;U-58&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">21 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,5</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-12.png" alt="Диван флоковый F-41" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван флоковый</span>
+                      <span>&lsquo;&lsquo;F-41&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">17 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,5</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-16.png" alt="Диван велюровый R-85" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван велюровый</span>
+                      <span>&lsquo;&lsquo;R-85&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">34 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,5</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-17.png" alt="Диван велюровый S-44" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван велюровый</span>
+                      <span>&lsquo;&lsquo;S-44&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">19 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,4</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-18.png" alt="Диван из шинила C-80" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван из шинила</span>
+                      <span>&lsquo;&lsquo;C-80&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">20 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs__panel">
+            <ul class="tabs__panel-list tabs__panel-list-3 list-reset">
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,6</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-10.png" alt="Диван из шинила C-42" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван из шинила</span>
+                      <span>&lsquo;&lsquo;C-42&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">18 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,6</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-11.png" alt="Диван велюровый U-58" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван велюровый</span>
+                      <span>&lsquo;&lsquo;U-58&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">21 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,5</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-12.png" alt="Диван флоковый F-41" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван флоковый</span>
+                      <span>&lsquo;&lsquo;F-41&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">17 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,5</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-16.png" alt="Диван велюровый R-85" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван велюровый</span>
+                      <span>&lsquo;&lsquo;R-85&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">34 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,5</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-17.png" alt="Диван велюровый S-44" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван велюровый</span>
+                      <span>&lsquo;&lsquo;S-44&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">19 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+              <li class="tabs__panel-item">
+                <article class="card catalog__card">
+                  <span class="card__star">4,4</span>
+                  <div class="card__img catalog__card-img">
+                    <a href="../card-page.html">
+                      <img src="../img/catalog-img-18.png" alt="Диван из шинила C-80" aria-hidden="true">
+                    </a>
+                  </div>
+                  <div class="card__content">
+                    <h4 class="title card__title catalog__cadr-title">
+                      <span>Диван из шинила</span>
+                      <span>&lsquo;&lsquo;C-80&rsquo;&rsquo;</span>
+                    </h4>
+                    <span class="card__price catalog__card-price">20 990 руб</span>
+                    <button class="btn-reset card__btn catalog__card-btn btn-stroke">Купить</button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tabs__menu">
+          <ul class="tabs__nav list-reset">
+            <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">1</button></li>
+            <li class="tabs__nav-item"><button class="btn-reset tabs__nav-btn" type="button">2</button></li>
+            <li class="tabs__nav-item tabs__nav-item--3"><button class="btn-reset tabs__nav-btn" type="button">3</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <article class="catalog__banner">
+      <div class="catalog__banner-img">
+        <img src="../img/banner.png" alt="Баннер Оксфорд">
+      </div>
+      <div class="catalog__banner-content">
+        <h2 class="catalog__banner-title">
+          <span class="catalog__banner-main">Оксфорд 1950</span>Новая коллекция изысканных кресел
+        </h2>
+        <a href="../catalog-page.html" class="category__item-link catalog__banner-link">
+          В каталог
+          <span class="category__item-arrow btn__arrow">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </article>
+    <div class="swiper-pagination catalog__pagination"></div>
+  </div>
+</section>

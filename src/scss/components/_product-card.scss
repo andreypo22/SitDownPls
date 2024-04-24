@@ -1,0 +1,444 @@
+.product {
+  &__container {
+    @include small-tablet {
+      padding-right: max(72px, calc((100% - var(--content-width)) / 2));
+      padding-left: max(72px, calc((100% - var(--content-width)) / 2));
+    }
+
+    @include mobile {
+      padding-top: 12px;
+      padding-right: max(12px, calc((100% - var(--content-width)) / 2));
+      padding-left: max(12px, calc((100% - var(--content-width)) / 2));
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--grid-gap);
+    grid-template-areas:
+    "im im im im im im cr cr cr cr cr cr"
+    "ims ims ims ims ims ims cr cr cr cr cr cr"
+    "ds ds ds ds ds ds inf inf inf inf inf inf"
+    "sh sh sh sh sh sh inf inf inf inf inf inf";
+    padding-bottom: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-areas:
+      "im im im im im cr cr cr cr"
+      "ims ims ims ims ims cr cr cr cr"
+      "ds ds ds ds ds inf inf inf inf"
+      "sh sh sh sh sh inf inf inf inf";
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+      "im im im im im im"
+      "ims ims cr cr cr cr"
+      "ds ds ds ds ds ds"
+      "sh sh sh sh sh sh"
+      "inf inf inf inf inf inf";
+    }
+
+    @include mobile {
+      grid-template-areas:
+      "im im im im im im"
+      "ims ims ims ims ims ims"
+      "cr cr cr cr cr cr"
+      "ds ds ds ds ds ds"
+      "sh sh sh sh sh sh"
+      "inf inf inf inf inf inf";
+    }
+  }
+
+  &__img {
+    margin-bottom: 33px;
+
+    &-top {
+      grid-area: im;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      @include small-tablet {
+        margin-bottom: 29px;
+      }
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-bottom {
+      grid-area: ims;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      padding: 10px 0 10px 25px;
+      background-color: var(--color-grey-light);
+
+      & img:not(:last-child) {
+        margin-right: 38px;
+
+        @include small-tablet {
+          margin: 0;
+          margin-bottom: 19px;
+        }
+
+        @include mobile {
+          margin-bottom: 0;
+          margin-right: 38px;
+        }
+      }
+
+      @include tablet {
+        padding-left: 10px;
+      }
+
+      @include small-tablet {
+        flex-direction: column;
+        padding: 25px 26px 25px 27px;
+      }
+
+      @include mobile {
+        flex-direction: row;
+        padding: 10px 10px 10px 10px;
+      }
+    }
+  }
+
+  &__descr {
+    grid-area: ds;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    padding-right: 10px;
+
+    @include small-tablet {
+      margin-bottom: 25px;
+      padding-top: 32px;
+      padding-right: 0;
+      width: 85%;
+    }
+
+    @include mobile {
+      padding-top: 0;
+      width: 100%;
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+    }
+
+    &-content p {
+      margin: 0;
+      margin-bottom: 7px;
+      font-size: 14px;
+      line-height: 180%;
+    }
+  }
+
+  &__scheme {
+    grid-area: sh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: auto;
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    @include small-tablet {
+      justify-content: start;
+    }
+
+    & img {
+      width: 243px;
+
+      @media (max-width: 640px) {
+        width: 200px;
+      }
+
+      @include mobile {
+        width: 140px;
+      }
+    }
+
+    & img:not(:last-child) {
+      margin-right: 32px;
+
+      @include tablet {
+        margin-right: 2px;
+      }
+
+      @include small-tablet {
+        margin-right: 29px;
+      }
+
+      @include mobile {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__info {
+    grid-area: inf;
+    padding-top: 30px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: start;
+    font-size: 14px;
+    line-height: 180%;
+    color: var(--color-grey);
+
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 9px;
+    }
+
+    &::after {
+      content: "";
+      flex-grow: 1;
+      order: 2;
+      border-bottom: 1px dotted var(--color-grey);
+      transform: translateY(-7px);
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__name {
+    padding-right: 4px;
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 14px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__description {
+    padding-left: 4px;
+    width: 48%;
+    order: 3;
+    color: var(--color-black);
+
+    @include tablet {
+      width: 54.2%;
+    }
+
+    @include small-tablet {
+      width: 35.2%;
+    }
+
+    @include mobile {
+      padding-left: 0;
+      width: 100%;
+      line-height: 14px;
+    }
+  }
+
+  &__comment {
+    grid-area: cr;
+    margin-bottom: 30px;
+    padding-top: 12px;
+    min-height: auto;
+    height: auto;
+    border-radius: 0;
+    background-color: var(--color-white);
+
+    @include tablet {
+      padding-top: 15px;
+    }
+
+    @include small-tablet {
+      padding-top: 50px;
+    }
+
+    @include mobile {
+      margin-bottom: 32px;
+      padding-top: 17px;
+    }
+
+    &-star {
+      position: relative;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      margin-bottom: 2px;
+
+      @include mobile {
+        font-size: 16px;
+        padding-left: 22px;
+      }
+    }
+
+    &-content {
+      padding-left: 0;
+      padding-bottom: 49px;
+
+      @include tablet {
+        padding-right: 0;
+        padding-bottom: 7px;
+      }
+
+      @include mobile{
+        padding-bottom: 0;
+      }
+    }
+
+    &-title {
+      margin-bottom: 5px;
+    }
+
+    &-info {
+      margin-bottom: 22px;
+      font-size: 14px;
+      line-height: 100%;
+      color: var(--color-grey);
+
+      @include mobile {
+        margin-bottom: 17px;
+        max-width: 80%;
+      }
+    }
+
+    &-price {
+      margin-bottom: 22px;
+      font-size: 36px;
+      line-height: 130%;
+
+      @include tablet {
+        margin-bottom: 20px;
+      }
+
+      @include mobile {
+        margin-bottom: 16px;
+        font-size: 24px;
+      }
+    }
+
+    &-btn {
+      margin-bottom: 12px;
+      padding: 17px 30px;
+
+      @include small-tablet {
+        margin-top: 0;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  &__btn {
+    &-add {
+      padding-left: 30px;
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--color-primary);
+
+      @include mobile {
+        align-self: center;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__section {
+    &-container {
+      position: relative;
+      padding-top: 49px;
+      padding-bottom: 70px;
+
+      @include tablet {
+        padding-top: 39px;
+      }
+
+      @include small-tablet {
+        padding-top: 0;
+        padding-right: max(72px, calc((100% - var(--content-width)) / 2));
+        padding-left: max(72px, calc((100% - var(--content-width)) / 2));
+      }
+
+      @include mobile {
+        padding-top: 33px;
+        padding-right: max(12px, calc((100% - var(--content-width)) / 2));
+        padding-bottom: 118px;
+        padding-left: max(12px, calc((100% - var(--content-width)) / 2));
+      }
+    }
+
+    &-title {
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+
+  &__slider {
+    &-btns {
+      top: 48px;
+
+      @include tablet {
+        top: 38px;
+      }
+
+      @include small-tablet {
+        top: 0;
+      }
+
+      @include mobile {
+        top: auto;
+        bottom: 70px;
+        right: calc(50% - 37.5px);
+      }
+    }
+  }
+
+  &__card {
+    min-height: 420px;
+
+    @include mobile {
+      min-height: auto;
+    }
+
+    &-img {
+      min-height: auto;
+      height: 192px;
+
+      @include tablet {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      @media (max-width: 330px) {
+        padding: 0 17px 0 17px;
+        height: 90px;
+      }
+
+      &--size {
+        @media (max-width: 330px) {
+          padding-top: 10px;
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    &-price {
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--color-grey-shade);
+    }
+  }
+}

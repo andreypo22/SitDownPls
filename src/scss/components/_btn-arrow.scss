@@ -1,0 +1,77 @@
+ .btn__arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border: 2px solid var(--color-primary);
+      border-radius: 100%;
+      background-color: transparent;
+      transition: background-color .1s ease-in-out, border-color .1s ease-in-out;
+
+      & svg path {
+        transition: stroke .1s ease-in-out;
+      }
+
+      &:focus-visible:not(:active):not(:hover) {
+        background-color: var(--color-primary-light);
+
+        & svg path {
+          stroke: var(--color-white);
+        }
+      }
+
+      @include hover {
+        background-color: var(--color-primary);
+
+        & svg path {
+          stroke: var(--color-white);
+        }
+      }
+
+      &:active {
+        border-color: var(--color-primary-shade);
+        background-color: var(--color-primary-shade);
+
+        & svg path {
+          stroke: var(--color-white);
+        }
+      }
+
+      &:disabled {
+        border-color: var(--color-grey);
+        cursor: default;
+
+        & svg path {
+          stroke: var(--color-grey);
+        }
+
+        &:focus {
+          border-color: var(--color-grey);
+          background-color: transparent;
+
+          & svg path {
+            stroke: var(--color-grey);
+          }
+        }
+
+        @include hover {
+          border-color: var(--color-grey);
+          background-color: transparent;
+
+          & svg path {
+            stroke: var(--color-grey);
+          }
+        }
+
+        &:active {
+          border-color: var(--color-grey);
+          background-color: transparent;
+
+          & svg path {
+            stroke: var(--color-grey);
+          }
+        }
+      }
+    }

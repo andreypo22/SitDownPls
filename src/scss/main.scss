@@ -1,0 +1,38 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+
+@import "./components/link-effects";
+@import "./components/section-title";
+@import "./components/btn-arrow";
+@import "./components/modals";
+@import "./components/btn-fill";
+@import "./components/btn-stroke";
+@import "./components/form";
+@import "./components/card";
+@import "./components/tooltip";
+@import "./components/catalog-check";
+@import "./components/nouislider.min";
+@import "./components/price-range";
+@import "./components/slider-navigation";
+@import "./components/breadcrumbs";
+@import "./components/tabs";
+@import "./components/header";
+@import "./components/custom-scroll";
+@import "./components/choices.min";
+@import "./components/select";
+@import "./components/hero";
+@import "./components/special";
+@import "./components/rating";
+@import "./components/banner";
+@import "./components/category";
+@import "./components/useful";
+@import "./components/contacts";
+@import "./components/catalog";
+@import "./components/product-card";
+@import "./components/footer";
+

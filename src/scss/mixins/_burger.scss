@@ -1,0 +1,163 @@
+/* stylelint-disable */
+.burger {
+  --burger-width: 24px;
+  --burger-height: 24px;
+  --burger-line-height: 3px;
+
+  position: relative;
+  display: none;
+  // margin-right: 31%;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: var(--color-primary);
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 5;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    border-radius: 4px;
+    background-color: currentColor;
+    transition: transform 0.1s ease-in-out, top 0.1s ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: calc(100% - var(--burger-line-height));
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: var(--burger-line-height);
+    border-radius: 4px;
+    background-color: currentColor;
+    transform: translateY(-50%);
+    transition: transform 0.1s ease-in-out;
+  }
+
+  &--active {
+    width: 24px;
+    // left: 4px;
+    background-color: #808080;
+    border-radius: 50%;
+    color: var(--color-primary);
+
+    &::before {
+      width: 100%;
+      top: 49%;
+      transform: rotate(45deg);
+      transition: transform 0.1s ease-in-out, top 0.1s ease-in-out;
+    }
+
+    &::after {
+      width: 100%;
+      // left: 4px;
+      top: 49%;
+      transform: rotate(-45deg);
+      transition: transform 0.1s ease-in-out, top 0.1s ease-in-out;
+    }
+
+    .burger__line {
+      transform: scale(0);
+      transition: transform 0.1s ease-in-out;
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  opacity: 0;
+  transition: opacity .1s ease-in-out;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-height: 158px;
+  }
+
+  &__item {
+    margin-right: 64px;
+    width: max-content;
+  }
+
+  &__item:not(:nth-child(3n)) {
+    margin-bottom: 41px;
+  }
+
+  // &__tel {
+  //   text-align: center;
+  //   padding-left: 22px;
+  //   font-family: 'TTFirsNeue';
+  //   font-weight: 400;
+  //   font-size: 16px;
+  //   line-height: 21px;
+  //   color: var(--color-burning-orange);
+  //   background-image: url(../../img/tel-icon.svg);
+  //   background-repeat: no-repeat;
+  //   transition: color .2s ease-in-out;
+
+  //   &:focus-visible:not(:active):not(:hover) {
+  //     color: var(--color-tuscany);
+  //   }
+
+  //   &:hover {
+  //     color: var(--color-grenadier);
+  //   }
+
+  //   &:active {
+  //     color: var(--color-red-orange);
+  //   }
+  // }
+}
+
+@media (max-width: 968px) {
+  .burger {
+    display: block;
+
+    @include mobile {
+      margin-left: 4px;
+    }
+  }
+
+  .menu--active {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 92px;
+    padding-left: 72px;
+    padding-bottom: 60px;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    clip: auto;
+    background-color: var(--color-white);
+    z-index: 4;
+
+    @include mobile {
+      padding-left: 12px;
+    }
+  }
+}

@@ -1,0 +1,347 @@
+.category {
+  &__container {
+    padding-top: 70px;
+    padding-bottom: 40px;
+
+    @include tablet {
+      padding-top: 70px;
+    }
+
+    @include small-tablet {
+      padding-right: max(72px, calc((100% - var(--content-width)) / 2));
+      padding-left: max(72px, calc((100% - var(--content-width)) / 2));
+    }
+
+    @include mobile {
+      padding-top: 70px;
+      padding-right: max(12px, calc((100% - var(--content-width)) / 2));
+      padding-left: max(12px, calc((100% - var(--content-width)) / 2));
+    }
+  }
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+
+    @include tablet {
+      grid-template-columns: repeat(9, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include mobile {
+      column-gap: 16px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 511px;
+    padding: 30px;
+    padding-top: 27px;
+    border-radius: 10px;
+    background-color: var(--color-grey-light);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: 60%;
+
+    @include tablet {
+      background-position-y: 59%;
+    }
+
+    @include mobile {
+      min-height: 206px;
+      padding: 16px;
+      padding-top: 10px;
+      background-position-y: 85%;
+    }
+
+    &-title {
+      margin-bottom: auto;
+
+      @include mobile {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 17px;
+      }
+
+      &--320 {
+        @include mobile {
+          align-items: flex-end;
+        }
+      }
+
+      &--large {
+        font-size: 24px;
+        line-height: 33px;
+      }
+    }
+
+    &-link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 108px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 120%;
+      color: var(--color-primary);
+      transition: color .1s ease-in-out;
+
+      @include mobile {
+        margin-left: 6px;
+      }
+
+      &--320 {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &--576 {
+        display: none;
+
+        @include mobile {
+          display: flex;
+        }
+      }
+
+      &--bottom {
+        @include mobile {
+          margin-bottom: -4px;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 81px;
+        height: 2px;
+        background-color: transparent;
+        transition: background-color .1s ease-in-out;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &:focus-visible:not(:active):not(:hover) {
+        &::before {
+          background-color: var(--color-primary);
+        }
+
+        & span {
+          background-color: var(--color-primary-light);
+
+          & svg path {
+            stroke: var(--color-white);
+          }
+        }
+      }
+
+      @include hover {
+        &::before {
+          background-color: var(--color-primary);
+        }
+
+        & span {
+          background-color: var(--color-primary);
+
+          & svg path {
+            stroke: var(--color-white);
+          }
+        }
+      }
+
+      &:active {
+        color: var(--color-primary-shade);
+
+        &::before {
+          background-color: var(--color-primary-shade);
+        }
+
+        & span {
+          border-color: var(--color-primary-shade);
+          background-color: var(--color-primary-shade);
+
+          & svg path {
+            stroke: var(--color-white);
+          }
+        }
+      }
+    }
+
+    &-arrow {
+      width: 22px;
+      height: 22px;
+    }
+
+    &-1 {
+      grid-column: 6 span;
+      background-image: url(../../img/category-sofa.png);
+
+      @include tablet {
+        order: 1;
+      }
+
+      @include mobile {
+        min-height: 332px;
+        padding: 27px 30px 30px 30px;
+        background-image: url(../../img/category-sofa-320.png);
+        background-position-y: 87%;
+      }
+    }
+
+    &-2 {
+      grid-column: 6 span;
+      background-image: url(../../img/category-armchair.png);
+
+      @include tablet {
+        grid-column: 3 span;
+        background-image: url(../../img/category-armchair-1024.png);
+        order: 4;
+      }
+
+      @include small-tablet {
+        background-image: url(../../img/category-armchair-768.png);
+        order: 3;
+      }
+
+      @include mobile {
+        background-image: url(../../img/category-armchair-320.png);
+      }
+    }
+
+    &-3, &-4, &-5 {
+      grid-column: 4 span;
+      min-height: 405px;
+
+      @include tablet {
+        grid-column: 3 span;
+      }
+
+      @include small-tablet {
+        min-height: 511px;
+      }
+
+      @include mobile {
+        min-height: 206px;
+      }
+    }
+
+    &-3 {
+      background-image: url(../../img/category-bed.png);
+
+      @include tablet {
+        background-image: url(../../img/category-bed-1024.png);
+        order: 2;
+      }
+
+      @include small-tablet {
+        background-image: url(../../img/category-bed-768.png);
+      }
+
+      @include mobile {
+        background-image: url(../../img/category-bed-320.png);
+      }
+    }
+
+    &-4 {
+      background-image: url(../../img/category-dresser.png);
+
+      @include tablet {
+        background-image: url(../../img/category-dresser-1024.png);
+        order: 3;
+      }
+
+      @include small-tablet {
+        background-image: url(../../img/category-dresser-768.png);
+        order: 4;
+      }
+
+      @include mobile {
+        background-image: url(../../img/category-dresser-320.png);
+        background-position-y: 87%;
+      }
+    }
+
+    &-5 {
+      background-image: url(../../img/category-chair.png);
+
+      @include tablet {
+        background-image: url(../../img/category-chair-1024.png);
+        order: 5;
+      }
+
+      @include small-tablet {
+        background-image: url(../../img/category-chair-768.png);
+      }
+
+      @include mobile {
+        background-image: url(../../img/category-chair-320.png);
+      }
+    }
+  }
+
+  &__choice {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 2px;
+    }
+
+    &-320 {
+      @include mobile {
+        flex-direction: row;
+        margin-bottom: 13px;
+      }
+    }
+
+    &-item {
+      @include mobile {
+        max-height: 40%;
+      }
+    }
+
+    &-item:not(:last-child) {
+      margin-right: 30px;
+
+      @include mobile {
+        margin-right: 21px;
+      }
+    }
+
+    &-link {
+      font-size: 14px;
+      line-height: 100%;
+      color: var(--color-grey);
+
+      @include mobile {
+        font-size: 10px;
+      }
+
+      &--320 {
+        font-size: 14px;
+      }
+    }
+  }
+}

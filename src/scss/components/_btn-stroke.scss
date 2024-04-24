@@ -1,0 +1,31 @@
+.btn-stroke {
+  width: max-content;
+  padding: 17px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+  transition: background-color .1s ease-in-out, border-color .1s ease-in-out, color .1s ease-in-out;
+
+  @include mobile {
+    padding: 10px 22px;
+  }
+
+  &:focus-visible:not(:active):not(:hover) {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+  }
+
+  @include hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  &:active {
+    background-color: var(--color-primary-shade);
+    border-color: var(--color-primary-shade);
+    color: var(--color-white);
+  }
+}

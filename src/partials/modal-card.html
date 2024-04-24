@@ -1,0 +1,104 @@
+<div class="graph-modal">
+  <div class="graph-modal__container graph-modal__container--card" role="dialog" aria-modal="true" data-graph-target="modal">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="../img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="graph-modal__content graph-modal__content--card">
+      <div class="swiper swiper-top">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="graph-modal__content--img" src="../img/product-slide-card-1.png" alt="Диван тканевый D-31">
+          </div>
+          <div class="swiper-slide">
+            <img class="graph-modal__content--img" src="../img/product-slide-card-1.png" alt="Диван тканевый D-31">
+          </div>
+          <div class="swiper-slide">
+            <img class="graph-modal__content--img" src="../img/product-slide-card-1.png" alt="Диван тканевый D-31">
+          </div>
+          <div class="swiper-slide">
+            <img class="graph-modal__content--img" src="../img/product-slide-card-1.png" alt="Диван тканевый D-31">
+          </div>
+        </div>
+      </div>
+      <div class="swiper swiper-bottom">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="graph-modal__content--img" src="../img/product-slide-card-2.png" alt="Диван тканевый D-31">
+          </div>
+          <div class="swiper-slide">
+            <img class="graph-modal__content--img" src="../img/product-slide-card-3.png" alt="Диван тканевый D-31">
+          </div>
+          <div class="swiper-slide">
+            <img class="graph-modal__content--img" src="../img/product-slide-card-4.png" alt="Диван тканевый D-31">
+          </div>
+          <div class="swiper-slide">
+            <img class="graph-modal__content--img" src="../img/product-slide-card-5.png" alt="Диван тканевый D-31">
+          </div>
+        </div>
+        <div class="slider-btns modal__slider-btns">
+          <button class="btn-reset slider-prev modal__slider-prev btn__arrow">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="btn-reset slider-next modal__slider-next btn__arrow">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L6 6L1 11" stroke="#A65CF0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--bay" role="dialog" aria-modal="true" data-graph-target="modal-bay">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="../img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="graph-modal__content graph-modal__content--bay">
+      <h3 class="section-title contacts__title">Купить в один клик</h3>
+      <p class="contacts__descr">
+        Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.
+      </p>
+      <form action="https://jsonplaceholder.typicode.com/posts" method="post" id="form" class="form card__form">
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input input-name" placeholder="Как вас зовут?" autocomplete="off">
+        </label>
+        <label class="form__label">
+          <input type="tel" name="Телефон" class="input-reset form__input input-tel" placeholder="Ваш телефон" autocomplete="off">
+        </label>
+        <label class="form__label form__label-card">
+          <input type="email" name="E-mail" class="input-reset form__input input-email" placeholder="Ваш e-mail" autocomplete="off">
+        </label>
+        <button class="btn-reset btn-fill form__btn" type="submit" data-graph-path="modal-call">Отправить</button>
+        <label class="form__check">
+          <input type="checkbox" class="visually-hidden form__check-input" checked aria-label="Принимаю условия">
+          <span class="form__arrow">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.800049 4L3.96943 7.16939L9.65318 0.785645" stroke="white" stroke-width="2"/>
+            </svg>
+          </span>
+            Принимаю <a href="#" class="form__link">пользовательское соглашение</a>
+        </label>
+      </form>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--call" role="dialog" aria-modal="true" data-graph-target="modal-call">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+      <svg>
+        <use xlink:href="../img/sprite.svg#modal-close"></use>
+      </svg>
+    </button>
+    <div class="graph-modal__content">
+      <svg class="graph-modal__content-svg">
+        <use xlink:href="../img/sprite.svg#modal-img"></use>
+      </svg>
+      <div class="graph-modal__content-info">Спасибо, мы вам перезвоним!</div>
+    </div>
+  </div>
+</div>

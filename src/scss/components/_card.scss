@@ -1,0 +1,180 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 511px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--color-grey-light);
+
+  &__star {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    padding-left: 23px;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-secondary);
+    background-image: url(../../img/star.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    @include mobile {
+      top: 17px;
+      left: 16px;
+      padding-left: 19px;
+      font-size: 12px;
+      background-image: url(../../img/star-320.svg);
+    }
+  }
+
+  &__sale {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 34px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    background-image: url(../../img/card-sale.svg);
+    background-repeat: no-repeat;
+    color: var(--color-white);
+  }
+
+  &__img {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 282px;
+    margin-bottom: 16px;
+
+    @include tablet {
+      &-trans {
+        transform: translateY(-28px);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px 30px 30px;
+    flex-grow: 1;
+
+    @include tablet {
+      padding-right: 30px;
+
+      &-trans {
+        padding-right: 38px;
+      }
+    }
+
+    @include mobile {
+      padding: 1px 16px 16px 16px;
+    }
+
+    &-large {
+      padding: 0 30px 30px 30px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 21px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+
+    @include tablet {
+      margin-bottom: 23px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    &-large {
+      margin-bottom: 21px;
+      font-size: 24px;
+      line-height: 31px;
+    }
+  }
+
+  &__price {
+    margin-bottom: 23px;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+
+    &-new {
+      margin-right: 30px;
+      font-size: 18px;
+      line-height: 23px;
+      color: var(--color-secondary);
+
+      @include tablet {
+        margin-right: 26px;
+      }
+
+      @include mobile {
+        margin-right: 26px;
+      }
+    }
+
+    &-old {
+      line-height: 21px;
+      text-decoration-line: line-through;
+      color: var(--color-grey);
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+
+    &-large {
+      @include mobile {
+        padding: 17px 32px;
+      }
+    }
+  }
+
+  &__max::after {
+    position: absolute;
+    right: 30px;
+    bottom: 27px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__max-2::after {
+    content: url(../../img/special-card-2-bottom.png);
+  }
+
+  &__max-5::after {
+    content: url(../../img/special-card-5-bottom.png);
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: 24px;
+    line-height: 33px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

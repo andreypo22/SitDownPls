@@ -1,0 +1,47 @@
+<section class="contacts">
+  <div class="container contacts__container">
+    <div class="contacts__content">
+      <div class="contacts__left">
+        <h3 class="section-title contacts__title">Мы всегда вам рады!</h3>
+        <p class="contacts__descr">
+          Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность
+          распределения внутренних резервов и ресурсов.
+          <span class="tooltip">
+            <button class="btn-reset tooltip__btn" aria-describedby="id1">?</button>
+            <span class="tooltip__txt" role="tooltip" id="id1">
+              <span class="visually-hidden">Тултип: </span>
+              Реплицированные с зарубежных источников, исследования формируют глобальную сеть.
+              <span class="tooltip__arrow"></span>
+            </span>
+          </span>
+        </p>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="post" id="form" class="form contacts__form">
+          <label class="form__label">
+            <input type="text" name="Имя" class="input-reset form__input input-name" placeholder="Как вас зовут?" autocomplete="off">
+          </label>
+          <label class="form__label">
+            <input type="tel" name="Телефон" class="input-reset form__input input-tel" placeholder="Ваш телефон" autocomplete="off">
+          </label>
+          <label class="form__label">
+            <input type="email" name="E-mail" class="input-reset form__input input-email" placeholder="Ваш e-mail" autocomplete="off">
+          </label>
+          <button class="btn-reset btn-fill form__btn" type="submit" data-graph-path="modal">Отправить</button>
+          <label class="form__check">
+            <input type="checkbox" class="visually-hidden form__check-input" checked aria-label="Принимаю условия">
+            <span class="form__arrow">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.800049 4L3.96943 7.16939L9.65318 0.785645" stroke="white" stroke-width="2"/>
+              </svg>
+            </span>
+              Принимаю <a href="#" class="form__link">пользовательское соглашение</a>
+          </label>
+        </form>
+      </div>
+      <picture class="contacts__right">
+        <source media="(max-width: 768px)" srcset="img/contacts-img-768.png">
+        <source media="(max-width: 1024px)" srcset="img/contacts-img-1024.png">
+        <img src="../img/contacts-img.png" alt="Фон секции контактов" aria-hidden="true">
+      </picture>
+    </div>
+  </div>
+</section>

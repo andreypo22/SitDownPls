@@ -1,0 +1,73 @@
+.useful {
+  &__container {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    @include small-tablet {
+      padding-right: max(72px, calc((100% - var(--content-width)) / 2));
+      padding-left: max(72px, calc((100% - var(--content-width)) / 2));
+    }
+
+    @include mobile {
+      padding-top: 38px;
+      padding-right: max(12px, calc((100% - var(--content-width)) / 2));
+      padding-bottom: 48px;
+      padding-left: max(12px, calc((100% - var(--content-width)) / 2));
+    }
+  }
+
+  &__title {
+    margin-bottom: 27px;
+
+    @include tablet {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__slider {
+    &-btns {
+      top: 30px;
+
+      @include mobile {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__card {
+    min-height: 676px;
+
+    @include tablet {
+      min-height: 456px;
+    }
+
+    &-img {
+      height: 100%;
+      min-height: auto;
+      margin-bottom: 29px;
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+
+      @include mobile {
+        margin-bottom: 29px;
+        min-height: auto;
+      }
+    }
+
+    &-content {
+      @include mobile {
+        padding: 1px 38px 30px 30px;
+      }
+    }
+
+    &-btn {
+      @include mobile {
+        padding: 17px 32px;
+      }
+    }
+  }
+}

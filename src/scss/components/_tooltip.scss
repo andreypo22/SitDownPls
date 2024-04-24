@@ -1,0 +1,76 @@
+.tooltip {
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 11px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 100%;
+    background-color: transparent;
+    color: var(--color-secondary);
+    transition: color .1s ease-in-out, background-color .1s ease-in-out;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--color-secondary);
+    }
+
+    &:focus {
+      color: var(--color-white);
+      background-color: var(--color-secondary);
+
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @include hover {
+      color: var(--color-white);
+      background-color: var(--color-secondary);
+
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__txt {
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    width: 157px;
+    font-size: 9px;
+    line-height: 14px;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .1s ease-in-out, visibility .1s ease-in-out;
+
+    &[data-popper-placement^='top'] > .tooltip__arrow {
+      bottom: -7px;
+    }
+
+    &[data-popper-placement^='bottom'] > .tooltip__arrow {
+      top: -7px;
+      transform: rotate(180deg) translate(-70px, 0) !important;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: -7px;
+    width: 17px;
+    height: 8px;
+    z-index: 1;
+    background-image: url(../../img/svg/tooltip-arrow.svg);
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,123 @@
+.hero {
+  padding-top: 12px;
+
+  &__slider {
+    @include mobile {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__slide {
+    position: relative;
+
+    &-img {
+      height: 400px;
+
+      @include mobile {
+        height: 210px;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: max(36px, calc((100% - var(--content-width)) / 2));
+
+    @include small-tablet {
+      padding-left: max(72px, calc((100% - var(--content-width)) / 2));
+    }
+
+    @include mobile {
+      top: 31px;
+      padding-left: max(30px, calc((100% - var(--content-width)) / 2));
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 49px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: var(--color-grey);
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    &--white {
+      color: var(--color-white);
+    }
+  }
+
+  &__link {
+    width: max-content;
+    font-weight: 700;
+    line-height: 16px;
+    color: var(--color-white);
+
+    @include mobile {
+      display: none;
+    }
+
+    &-320 {
+      display: none;
+      padding-right: max(12px, calc((100% - var(--content-width)) / 2));
+      padding-left: max(12px, calc((100% - var(--content-width)) / 2));
+
+      & a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      @include mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-black);
+  opacity: .3;
+
+  &-active {
+    opacity: 1;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 20px;
+
+  @include tablet {
+    bottom: 23px;
+  }
+
+  @include mobile {
+    bottom: 10px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8px;
+
+  @include mobile {
+    margin: 0 4px;
+    width: 6px;
+    height: 6px;
+  }
+}

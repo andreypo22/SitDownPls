@@ -1,0 +1,259 @@
+.catalog {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "ft ft ft co co co co co co co co co"
+      "bn bn bn co co co co co co co co co";
+    gap: var(--grid-gap);
+    row-gap: 0;
+    padding-bottom: 133px;
+
+    @include tablet {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-areas:
+      "co co co co co co co co co";
+      padding-bottom: 134px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+      "co co co co co co";
+      padding-right: max(72px, calc((100% - var(--content-width)) / 2));
+      padding-left: max(72px, calc((100% - var(--content-width)) / 2));
+    }
+
+    @include mobile {
+      padding-top: 12px;
+      padding-right: max(12px, calc((100% - var(--content-width)) / 2));
+      padding-bottom: 135px;
+      padding-left: max(12px, calc((100% - var(--content-width)) / 2));
+    }
+  }
+
+  &__filter {
+    grid-area: ft;
+    margin-bottom: 88px;
+
+    @include tablet {
+      display: none;
+    }
+
+    &-title {
+      margin: 0;
+      margin-bottom: 21px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%;
+      color: var(--color-black);
+    }
+  }
+
+  &__content {
+    grid-area: co;
+    position: relative;
+
+    @include tablet {
+      grid-column: 9 span;
+    }
+
+    &-title {
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 130%;
+
+      @include tablet {
+        margin-bottom: 14px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 27px;
+      }
+
+      @include mobile {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__select {
+    display: none;
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: var(--grid-gap);
+      margin-bottom: 30px;
+
+      @include small-tablet {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+        "tl tl tl tl tl tl"
+        "cg cg pr pr . ."
+        "sl sl cl cl . .";
+        row-gap: 13px;
+      }
+
+      @include mobile {
+        grid-template-areas:
+        "tl tl tl tl tl tl"
+        "cg cg cg pr pr pr"
+        "sl sl sl cl cl cl";
+        column-gap: 16px;
+        row-gap: 12px;
+        margin-bottom: 31px;
+      }
+    }
+
+    &-title {
+      grid-column: 1 span;
+      align-self: center;
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+
+      @include small-tablet {
+        grid-area: tl;
+      }
+    }
+
+    & .choices {
+      grid-column: 2 span;
+      align-self: center;
+      margin-bottom: 0;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        position: relative;
+        z-index: 2;
+      }
+
+      &__list {
+        column-count: 1;
+      }
+
+      @include small-tablet {
+        &:nth-child(2) {
+          grid-area: cg;
+        }
+
+        &:nth-child(3) {
+          grid-area: pr;
+        }
+
+        &:nth-child(4) {
+          grid-area: sl;
+        }
+
+        &:nth-child(5) {
+          grid-area: cl;
+        }
+      }
+    }
+
+    & .choices[data-type*=select-one] .choices__inner {
+      padding: 0;
+      padding: 9px 13px;
+      border-radius: 10px 10px 10px 10px;
+      background-color: var(--color-grey-light);
+    }
+
+    & .choices__placeholder {
+      color: var(--color-black);
+    }
+
+    & .choices__list--single {
+      padding: 0;
+    }
+
+    & .choices[data-type*=select-one]:after {
+      top: 40%;
+      right: 16px;
+    }
+  }
+
+  &__card {
+    min-height: 420px;
+    padding-top: 40px;
+
+    @include mobile {
+      min-height: 278px;
+    }
+
+    &-img {
+      margin-bottom: 14px;
+      min-height: auto;
+      height: 154px;
+
+      @include tablet {
+        margin-bottom: 12px;
+        height: 155px;
+      }
+
+      @include small-tablet {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      @include mobile {
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 130px;
+      }
+
+      @media (max-width: 350px) {
+        height: 54px;
+      }
+    }
+
+    &-price {
+      font-size: 16px;
+      line-height: 130%;
+      color: var(--color-grey-shade);
+    }
+  }
+
+  &__banner {
+    grid-area: bn;
+    border-radius: 10px;
+    background-color: var(--color-black);
+
+    @include tablet {
+      display: none;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      padding: 29px;
+    }
+
+    &-title {
+      margin: 0;
+      margin-bottom: 12px;
+      max-width: 230px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--color-grey);
+    }
+
+    &-main {
+      display: block;
+      font-family: 'PlayfairDisplay';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 32px;
+      color: var(--color-gold);
+    }
+
+    &-link {
+      margin-top: auto;
+    }
+  }
+}

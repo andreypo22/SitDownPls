@@ -1,0 +1,113 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+
+    &-card {
+      display: none;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 17px 18px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: var(--color-grey-light);
+    transition: border-color .1s ease-in-out, background-color .1s ease-in-out;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 40px;
+      color: var(--color-grey);
+    }
+
+    &:focus-visible:not(:active):not(:hover) {
+      border-color: var(--color-primary);
+      background-color: var(--color-pink-light);
+    }
+
+    @include hover {
+      background-color: var(--color-md-grey);
+    }
+
+    &:active {
+      border-color: var(--color-green-input);
+    }
+  }
+
+  &__btn {
+    margin-bottom: 12px;
+    padding: 16px 31px;
+    width: max-content;
+
+    @include tablet {
+      margin-bottom: 13px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 11px;
+      padding: 17px 31px;
+    }
+
+    @include mobile {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__check {
+    font-size: 14px;
+    line-height: 19px;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &-input:checked {
+      & + .form__arrow {
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+      }
+    }
+  }
+
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--color-grey);
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+
+    @include mobile {
+      margin-right: 3px;
+    }
+  }
+
+  &__link {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+}
+
+
+.just-validate-error-label {
+  position: absolute;
+  top: -18px;
+  left: 18px;
+  color: var(--color-red-input) !important;
+}
+
+.just-validate-error-field {
+  border-color: var(--color-red-input) !important;
+}
+
